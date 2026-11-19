@@ -23,6 +23,4 @@ int main(){
     std::cout << counter;
     std::cout << " occurences of ";
     std::cout << s;
-
-
 }
