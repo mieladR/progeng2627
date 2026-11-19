@@ -3,7 +3,8 @@
 
 int main(){
     std::vector<int> v;
-    int n, x, i, s = 0;
+    std::vector<int> stored;
+    int n, x, i, j, s;
     std::cout << "Please enter n: ";
     std::cin >> n;
     for(i=0; i<n; i++){
@@ -17,10 +18,24 @@ int main(){
     for(i=0; i<v.size(); i++){
         if(v[i] == s){
             counter++;
+            stored.push_back(i);
         }
     }
-    std::cout << "There are ";
-    std::cout << counter;
-    std::cout << " occurences of ";
-    std::cout << s;
+    if(s == 0){
+        std::cout << "There are 0 occurences of ";
+        std::cout << s;
+    }
+    if(s != 0){
+        std::cout << "There are ";
+        std::cout << counter;
+        std::cout << " occurence(s) of ";
+        std::cout << s;
+        std::cout << " at indices: " << std::endl;
+        for(j=0; j<counter; j++){
+            std::cout << (stored[j]) << std::endl;
+        }
+    }
+
+
+    
 }
